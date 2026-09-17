@@ -58,6 +58,12 @@ android {
                 // key.properties가 없는 환경(CI 등)에서는 디버그 키로 폴백
                 signingConfigs.getByName("debug")
             }
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 }
