@@ -17,7 +17,7 @@ class ItemsResult {
   });
 }
 
-const _foundItemSelect = '*, profiles(id, name, avatar), quizzes(id, question, type, options)';
+const _foundItemSelect = '*, profiles!found_items_finder_id_fkey(id, name, avatar), quizzes(id, question, type, options)';
 const _lostReportSelect = '*, profiles!lost_items_owner_id_fkey(id, name, avatar)';
 
 class ItemsService {
